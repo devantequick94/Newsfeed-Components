@@ -106,8 +106,21 @@ function articleMaker(obj){
   p1.textContent = obj.firstParagraph
   p2.textContent = obj.secondParagraph
   p3.textContent = obj.thirdParagraph
+  nDiv.appendChild(p1)
+  nDiv.appendChild(p2)
+  nDiv.appendChild(p3)
+  const nSpan = document.createElement("span")
+  nSpan.textContent = "+"
+  nSpan.classList.add("expandButton")
+  nSpan.addEventListener("click", () => {
+    nDiv.classList.toggle("article-open")
+  })
+  nDiv.appendChild(nSpan)
+  return nDiv
 }
-
+data.forEach(obj =>{
+  document.querySelector("div.articles").appendChild(articleMaker(obj))
+})
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,

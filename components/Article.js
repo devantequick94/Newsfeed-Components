@@ -104,8 +104,8 @@ function articleMaker(obj){
   const p2 = document.createElement("p")
   const p3 = document.createElement("p")
   p1.textContent = obj.firstParagraph
-  p2.textContent = obj.firstParagraph
-  p3.textContent = obj.firstParagraph
+  p2.textContent = obj.secondParagraph
+  p3.textContent = obj.thirdParagraph
 }
 
 /*

@@ -97,8 +97,17 @@ function articleMaker(obj){
   tit.textContent = obj.title
   nDiv.appendChild(tit)
   const nDate = document.createElement("p")
+  nDate.textContent = obj.date
   nDate.classList.add("date")
+  nDiv.appendChild(nDate)
+  const p1 = document.createElement("p")
+  const p2 = document.createElement("p")
+  const p3 = document.createElement("p")
+  p1.textContent = obj.firstParagraph
+  p2.textContent = obj.firstParagraph
+  p3.textContent = obj.firstParagraph
 }
+
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,
